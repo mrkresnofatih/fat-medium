@@ -1,13 +1,13 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ArticleCard from "../components/ArticleCard";
 import Header from "../components/Header";
 import {default as Img} from 'next/image';
 import AppHead from "../components/AppHead";
 import {apiHostUrl} from "../constants/route";
+import Link from 'next/link'
 
 export const getStaticProps = async () => {
-    const response = await fetch(apiHostUrl+'/api/client/getAll');
+    const response = await fetch(apiHostUrl + '/api/client/getAll');
     const data = await response.json();
 
     return {
@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 export default function Home({articles}) {
     return (
         <div className={styles.container}>
-            <AppHead title={"Home"} />
+            <AppHead title={"Home"}/>
             <Header/>
             <div className={styles.bodyContainer}>
                 <div className={styles.contentContainer}>
@@ -34,8 +34,11 @@ export default function Home({articles}) {
                         />
                         <div>
                             <h4 className={styles.allArticlesSectionHeader}>Welcome.</h4>
-                            <p className={styles.homeBannerDescription}>Fatmedium is a site of free articles for all! Publish your own articles from the admin site!</p>
-                            <label className={styles.goToAdminButton}>Go To Admin</label>
+                            <p className={styles.homeBannerDescription}>Fatmedium is a site of free articles for all!
+                                Publish your own articles from the admin site!</p>
+                            <Link href={"https://fatmedium-admin-fe.netlify.app"}>
+                                <label className={styles.goToAdminButton}>Go To Admin</label>
+                            </Link>
                         </div>
                     </div>
                     <h4 className={styles.allArticlesSectionHeader}>Everything.</h4>

@@ -1,0 +1,16 @@
+.headerContainer {
+    margin: 0;
+    padding: 12px 16px;
+    background-color: #353535;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLogo {
+    font-size: 24px;
+    color: white;
+}
+
+.headerLogo:hover {
+    cursor: pointer;
+}

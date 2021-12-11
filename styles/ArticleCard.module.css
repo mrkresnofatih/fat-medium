@@ -1,0 +1,66 @@
+.articleCardContainer {
+    margin: 0 0 16px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    position: relative;
+}
+
+.articleCardContainer:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.articleCardContainer:hover .articleReadMore {
+    display: flex;
+}
+
+.articleReadMore {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: yellowgreen;
+    top: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.articleTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.articleAbstract {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.articleDate {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.articleTitleBox {
+    margin-right: 16px;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+}

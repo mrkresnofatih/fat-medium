@@ -4,7 +4,7 @@ import {default as Img} from "next/dist/client/image";
 import Link from "next/link";
 import AppHead from "../../components/AppHead";
 
-export const ArticleNotFound = () => {
+const ArticleNotFound = () => {
     return (
         <div className={styles.container}>
             <AppHead title={"404"} />
@@ -31,3 +31,5 @@ export const ArticleNotFound = () => {
         </div>
     )
 }
+
+export default ArticleNotFound;
